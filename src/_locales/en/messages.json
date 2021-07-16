@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "browser-extension-boilerplate",
+        "description": "Extension name"
+    },
+    "description": {
+        "message": "browser extension boilerplate",
+        "description": "Description of the extension"
+    }
+}

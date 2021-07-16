@@ -1,0 +1,34 @@
+{
+    "manifest_version": 2,
+    "name": "__MSG_NAME__",
+    "version": "1.0",
+    "default_locale": "en",
+    "description": "__MSG_description__",
+    "icons": {
+        "16": "assets/icon_16px.png",
+        "48": "assets/icon_48px.png",
+        "128": "assets/icon_128px.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "24": "assets/icon_24px.png",
+            "48": "assets/icon_48px.png"
+        },
+        "default_title": "__MSG_name__",
+        "default_popup": "popup/index.html"
+    },
+    "content_scripts": [{
+        "all_frames": true,
+        "matches": [ "\u003Call_urls>" ],
+        "js": ["browser-polyfill.min.js", "content-script/index.js"]
+    }],
+    "background": {
+        "scripts": ["background/index.js"],
+        "persistent": false
+    },
+    "options_page": "",
+    "permissions": [
+        "\u003Call_urls>"
+    ],
+    "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'"
+}
